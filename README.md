@@ -1,18 +1,28 @@
-## Getting Started
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+# Vectores con Programación Orientada a Objetos en Java
 
-## Folder Structure
+## 🛠 Instalación
 
-The workspace contains two folders by default, where:
+- **Primero abre tu terminal ya sea git bash o power shell**
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+### Clonar el repositorio
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+```bash
+    git clone https://github.com/hdz-kevin/vectors.git
+```
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+### Navegar al directorio del proyecto
 
-## Dependency Management
+```bash
+    cd vectors
+```
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+### Abrir con vscode
+
+```bash
+    code .
+```
+
+## Ejecución
+
+Una vez abierto el proyecto desde vscode, simplemente ejecutalo estando en el fichero `src/App.java`
