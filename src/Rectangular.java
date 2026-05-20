@@ -64,6 +64,9 @@ class Rectangular {
     public void setX(double x) {
         this.x = x;
 
+        // Calcular magnitud
+        this.magnitud = Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2));
+
         // vector en el primer cuadrante (+x, +y)
         if (x >= 0 && y >= 0)
             this.direccion = Math.toDegrees(Math.atan(y / x));
@@ -95,6 +98,9 @@ class Rectangular {
      */
     public void setY(double y) {
         this.y = y;
+
+        // Calcular magnitud
+        this.magnitud = Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2));
 
         // vector en el primer cuadrante (+x, +y)
         if (x >= 0 && y >= 0)
