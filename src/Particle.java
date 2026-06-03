@@ -48,6 +48,8 @@ public class Particle {
         calculateSpeedEquation();
         calculateAccelerationEquation();
 
+        this.time = time;
+
         this.calculatePosition(time);
         this.calculateSpeed(time);
         this.calculateAcceleration(time);
@@ -159,6 +161,7 @@ public class Particle {
         System.out.println("Position Equation: " + particle.getPositionEquation());
         System.out.println("Speed Equation: " + particle.getSpeedEquation());
         System.out.println("Acceleration Equation: " + particle.getAccelerationEquation());
+
 
         System.out.println("\nInitial position: " + particle.getPosition());
         System.out.println("Initial speed: " + particle.getSpeed());
