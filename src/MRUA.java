@@ -1,4 +1,4 @@
-/** 
+/**
  * Represents a movement with constant acceleration
  */
 public class MRUA {
@@ -9,12 +9,12 @@ public class MRUA {
     /** The particle that is moving */
     private Particle particle;
 
-    /** 
+    /**
      * Creates a new MRUA instance
      * 
      * @param initialPosition The initial position of the particle
-     * @param initialSpeed The initial speed of the particle
-     * @param acceleration The acceleration of the particle
+     * @param initialSpeed    The initial speed of the particle
+     * @param acceleration    The acceleration of the particle
      */
     public MRUA(double initialPosition, double initialSpeed, double acceleration) {
         this.initialPosition = initialPosition;
@@ -103,8 +103,12 @@ public class MRUA {
 
     public static void main(String[] args) {
         MRUA mrua = new MRUA(3, 2, 2);
-        
+
         int time = 3;
+        mrua.evalTime(time);
+        mrua.printVariables(time);
+
+        time = 5;
         mrua.evalTime(time);
         mrua.printVariables(time);
     }

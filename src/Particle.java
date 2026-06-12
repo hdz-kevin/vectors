@@ -5,12 +5,12 @@ public class Particle {
      * Current position of the particle
      */
     private double position;
-    
+
     /**
      * Current speed of the particle
      */
     private double speed;
-    
+
     /**
      * Current acceleration of the particle
      */
@@ -19,18 +19,18 @@ public class Particle {
     /**
      * The time that is used to calculate the position, speed, and acceleration
      */
-    private int time;
-    
+    private double time;
+
     /**
      * Equation for the position of the particle
      */
     private String positionEquation;
-    
+
     /**
      * Equation for the speed of the particle
      */
     private String speedEquation;
-    
+
     /**
      * Equation for the acceleration of the particle
      */
@@ -43,7 +43,7 @@ public class Particle {
      * 
      * @param positionEquation
      */
-    public Particle(String positionEquation, int time) {
+    public Particle(String positionEquation, double time) {
         this.positionEquation = positionEquation;
         calculateSpeedEquation();
         calculateAccelerationEquation();
@@ -72,22 +72,23 @@ public class Particle {
     /**
      * Calculate the position for the given time
      */
-    public void calculatePosition(int time) {
+    public void calculatePosition(double time) {
         this.position = Double.valueOf(evaluator.eval(this.positionEquation.replace("t", "(" + time + ")")).toString());
     }
 
     /**
      * Calculate the speed for the given time
      */
-    public void calculateSpeed(int time) {
+    public void calculateSpeed(double time) {
         this.speed = Double.valueOf(evaluator.eval(this.speedEquation.replace("t", "(" + time + ")")).toString());
     }
 
     /**
      * Calculate the acceleration for the given time
      */
-    public void calculateAcceleration(int time) {
-        this.acceleration = Double.valueOf(evaluator.eval(this.accelerationEquation.replace("t", "(" + time + ")")).toString());
+    public void calculateAcceleration(double time) {
+        this.acceleration = Double
+                .valueOf(evaluator.eval(this.accelerationEquation.replace("t", "(" + time + ")")).toString());
     }
 
     /**
@@ -95,16 +96,17 @@ public class Particle {
      * 
      * @return the time of the motion
      */
-    public int getTime() {
+    public double getTime() {
         return this.time;
     }
-    
+
     /**
-     * Set the time of the motion and calculate the position, speed, and acceleration
+     * Set the time of the motion and calculate the position, speed, and
+     * acceleration
      * 
      * @param time - The time of the motion
      */
-    public void setTime(int time) {
+    public void setTime(double time) {
         this.time = time;
 
         this.calculatePosition(time);
@@ -161,7 +163,6 @@ public class Particle {
         System.out.println("Position Equation: " + particle.getPositionEquation());
         System.out.println("Speed Equation: " + particle.getSpeedEquation());
         System.out.println("Acceleration Equation: " + particle.getAccelerationEquation());
-
 
         System.out.println("\nInitial position: " + particle.getPosition());
         System.out.println("Initial speed: " + particle.getSpeed());
